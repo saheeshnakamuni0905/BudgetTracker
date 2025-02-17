@@ -25,3 +25,31 @@ A full-stack app demonstrating key React concepts including Next.js, SEO, Redux,
 
 - **Budget suggestions** per category
 - **Dynamic visual warnings** (e.g., color changes) when exceeding category goals
+- **Personal Finance Score** Calculate a “money management” score based on factors like budget adherence, spending frequency, or savings rate—giving users a quick snapshot of their financial habits.
+
+## Architecture
+
+This project is implemented as multiple microservices:
+
+- **Auth Service**  
+  Handles user registration, login, and user profile storage.
+
+- **Budget Service**  
+  Manages budgets, expenses (transactions), categories, and goals. References the `userID` for ownership.
+
+## Data Model
+
+- **User**  
+  `id`, `firstName`, `lastName`, `email`, `password (encrypted)`
+
+- **Transactions**  
+  `id`, `userID`, `amount`, `date`, `categoryID`, `participantCount` (optional), `netAmount`(optional), `owedOrOwing`(optional)
+
+- **Category**  
+  `id`, `catName`
+
+- **Budget**  
+  `id`, `userID`, `amount`, `timePeriod`, `categoryID`
+
+## License  
+This project is open source and available under the [MIT License](https://opensource.org/licenses/MIT).
