@@ -1,7 +1,7 @@
 # BudgetTracker
 A full-stack app demonstrating key React concepts including Next.js, SEO, Redux, Hooks, GraphQL, and end-to-end DevOps with Docker &amp; Kubernetes
 
-*Actor:* User
+<h3>*Actor:*</h3> User
 
 *Functions:*
 Secure Login (OAuth or JWT)
