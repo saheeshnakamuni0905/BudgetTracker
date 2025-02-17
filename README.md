@@ -1,22 +1,22 @@
 # BudgetTracker
 A full-stack app demonstrating key React concepts including Next.js, SEO, Redux, Hooks, GraphQL, and end-to-end DevOps with Docker &amp; Kubernetes
 
-<h3>*Actor:*</h3> User
+<h4>Actor:User</h4>
 
-*Functions:*
-Secure Login (OAuth or JWT)
-Add / Edit / Delete Budget (Transactions/Expenses)
-Automatic or Manual Categorization of budgets/expenses
-Visualize Spending with charts that update automatically
-Set Financial Goals (warn when going over budget)
+<h4>Functions:</h3>
+<h4>Secure Login (OAuth or JWT)</h4>
+<h4>Add / Edit / Delete Budget (Transactions/Expenses)</h4>
+<h4>Automatic or Manual Categorization of budgets/expenses</h4>
+<h4>Visualize Spending with charts that update automatically</h4>
+<h4>Set Financial Goals (warn when going over budget)</h4>
 
-*Must-Have Features:*
-Secured login (OAuth)
-Basic CRUD on budgets/expenses
-Charts that recalculate sums and reflect changes (red color for over-budget)
-Budget/goal tracking
+<h3>Must-Have Features:</h3>
+<h4>Secured login (OAuth)</h4>
+<h4>Basic CRUD on budgets/expenses</h4>
+<h4>Charts that recalculate sums and reflect changes (red color for over-budget)</h4>
+<h4>Budget/goal tracking</h4>
 
-*Nice-to-Have:*
-Budget suggestions per category
-Dynamic visual warnings (e.g., color changes) when exceeding category goals
+<h3>Nice-to-Have:</h3>
+<h4>Budget suggestions per category</h4>
+<h4>Dynamic visual warnings (e.g., color changes) when exceeding category goals </h4>
 
