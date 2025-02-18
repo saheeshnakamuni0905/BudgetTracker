@@ -1,16 +1,22 @@
 require("dotenv").config();
+const {ApolloServer} = require("apollo-server-express");
 const express = require("express");
 const mongoose = require("mongoose");
+const typeDefs = require("./graphql/typeDefs");
+const resolvers = require("./graphql/resolvers");
 const app = express();
-const userRoutes = require("");
-const PORT = process.env.PORT || 3000;
 
-app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URI, {useNewUrlParser : true, useUnifiedTopology : true })
+mongoose.connect(process.env.MONGO_URI)
         .then(()=>console.log("MongoDB connected"))
         .catch((err)=>console.error("MongoDB connection failed: ",err));
 
-app.use("/api",userRoutes);
+const server = new ApolloServer({typeDefs, resolvers});
+async function startServer() {
+        await server.start();
+        server.applyMiddleware({app});
 
-app.listen(PORT, ()=>console.log(`Server is running on ${PORT}`));
+        app.listen({port:4000}, ()=>console.log(`Server is running on 4000 ${server.graphqlPath}`));
+}
+
+startServer();
