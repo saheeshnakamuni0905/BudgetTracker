@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
-    id:{ type : String, required : true},
     name:{ type : String, required : true, timestamps: true },
     email:{
         type:String, 
@@ -18,8 +17,8 @@ const userSchema = new mongoose.Schema({
                 return /[A-Z]/.test(value);
             }, 
             message : "Password must contain at least one uppercase letter"
-        },
+        }, 
     },
-});
+}, { timestamps: true },);
 
 module.exports = mongoose.model("User", userSchema);
